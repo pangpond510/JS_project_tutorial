@@ -1,18 +1,21 @@
 var express = require('express');
 var app = express();
 
+//response html
 app.get('/index.html', function (req, res) {
    res.sendFile( __dirname + "/" + "index.html" );
    console.log("response html");
 })
 
+//response js
 app.get('/script', function (req, res) {
    res.sendFile( __dirname + "/" + "script.js" );
    console.log("response script");
 })
 
-app.get('/styles', function (req, res) {
-   res.sendFile( __dirname + "/" + "styles.css" );
+//response css
+app.get('/style', function (req, res) {
+   res.sendFile( __dirname + "/" + "style.css" );
    console.log("response style");
 })
 
